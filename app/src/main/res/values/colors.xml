@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#8497FF</color>
+    //buttons and header
+    <color name="purple_500">#5421AF</color>
+    //top phone Bar
+    <color name="purple_700">#240161</color>
+    //icon
+    <color name="teal_200">#87CCFA</color>
+    <color name="teal_700">#3F51B5</color>
+    //icon inside the bottom
+    <color name="black">#5421AF</color>
+    <color name="white">#758AFF</color>
+</resources>
