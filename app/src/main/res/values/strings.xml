@@ -93,4 +93,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_monster_detail_scrolling">ScrollingActivity</string>
     <string name="add_recipe_name">Add Recipe Name</string>
+    <string name="title_activity_home_page_scrolling">ScrollingActivity</string>
+    <string name="title_activity_maisum_scrolling">ScrollingActivity</string>
 </resources>

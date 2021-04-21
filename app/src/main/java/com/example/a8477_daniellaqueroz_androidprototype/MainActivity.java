@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.a8477_daniellaqueroz_androidprototype.actvities.addRecipeScrollingActivity;
 import com.example.a8477_daniellaqueroz_androidprototype.actvities.recipeDetailScrollingActivity;
@@ -35,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements OnRecipeListener 
     private List<ProductsList> productsList;
     private recipeRecyclerViewAdapter adapter;
 
+
+
     DataService productListDataService;
     View rootview;
 
@@ -54,27 +55,30 @@ public class MainActivity extends AppCompatActivity implements OnRecipeListener 
 
         productListDataService = new DataService();
         productListDataService.init(this);
-        rootview= findViewById(R.id.toolbar).getRootView();
+        rootview= findViewById(R.id.recipesRecyclerView).getRootView();
 
         productsList= productListDataService.getProductsList();
 
         adapter = new recipeRecyclerViewAdapter(productsList, this, this);
 
+
+
+
         recipeRecyclerView.setAdapter(adapter);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //     Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //            .setAction("Action", null).show();
-                addNewRecipe();
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+       fab.setOnClickListener(new View.OnClickListener() {
+           @Override
+       public void onClick(View view) {
+   Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+          .setAction("Action", null).show();
+               addNewRecipe();
 
 
             }
 
         });
-    }
+   }
 
     private void addNewRecipe() {
         Intent goToAddNewRecipe = new Intent(MainActivity.this, addRecipeScrollingActivity.class);

@@ -8,18 +8,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.8477_DaniellaQueroz_AndroidPrototype">
-        <activity android:name=".Signin"></activity>
+        android:theme="@style/Theme.8477_DaniellaQueroz_AndroidPrototype.NoActionBar">
+        <activity
+            android:name=".actvities.addRecipeScrollingActivity"
+            android:label="@string/title_activity_add_recipe_scrolling"
+            android:theme="@style/Theme.8477_DaniellaQueroz_AndroidPrototype.NoActionBar.NoActionBar" />
+        <activity android:name=".Signin" />
         <activity
             android:name=".actvities.recipeDetailScrollingActivity"
             android:label="@string/title_activity_monster_detail_scrolling"
             android:theme="@style/Theme.8477_DaniellaQueroz_AndroidPrototype.NoActionBar" />
-        <activity android:name=".login" />
-        <activity
-            android:name=".actvities.addRecipeScrollingActivity"
-            android:label="@string/title_activity_add_recipe_scrolling"
-            android:theme="@style/Theme.8477_DaniellaQueroz_AndroidPrototype.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

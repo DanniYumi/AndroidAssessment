@@ -18,7 +18,7 @@ public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
     public final ImageView recipeImageImageView;
     public final TextView RecipeNameTextView;
-    public final TextView ingredientstTextView;
+    public final TextView ingredientsTextView;
     public final TextView votesTextView;
     public Button prepareButton;
     public RatingBar ratingBar= null;
@@ -29,7 +29,7 @@ public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
         recipeImageImageView = itemView.findViewById(R.id.recipeImageImageView);
         RecipeNameTextView = itemView.findViewById(R.id.RecipeNameEditText);
-        ingredientstTextView=itemView.findViewById(R.id.ingredientstTextView);
+        ingredientsTextView=itemView.findViewById(R.id.ingredientstTextView);
         votesTextView=itemView.findViewById(R.id.votesTextView);
         ratingBar =itemView.findViewById(R.id.votesRatingBar);
         prepareButton= itemView.findViewById(R.id.prepareButton);
@@ -40,7 +40,7 @@ public class RecipeViewHolder extends RecyclerView.ViewHolder {
         //update the informations of a recipe
         public void updateRecipes(ProductsList productsList){
         RecipeNameTextView.setText(productsList.getRecipeName());
-        ingredientstTextView.setText(productsList.getIngredients());
+        ingredientsTextView.setText(productsList.getIngredients());
         votesTextView.setText(productsList.getVotes()+" Votes");
 
         View rootView= recipeImageImageView.getRootView();
@@ -48,7 +48,7 @@ public class RecipeViewHolder extends RecyclerView.ViewHolder {
         int resID= rootView.getResources().getIdentifier(productsList.getProductImage(), "drawable", rootView.getContext().getPackageName());
         recipeImageImageView.setImageResource(resID);
         this.RecipeNameTextView.setText(productsList.getRecipeName());
-        this.ingredientstTextView.setText(productsList.getIngredients());
+        this.ingredientsTextView.setText(productsList.getIngredients());
         this.votesTextView.setText(productsList.getVotes()+" votes");
 
         //get the stars and divide by the number of votes and gives the average

@@ -91,7 +91,7 @@ public class ListDatabase extends SQLiteOpenHelper {
     private String getRandomProductImage() {
         Random ran = new Random();
         int value = ran.nextInt(30) + 1;
-        return "product" + value;
+        return "product_" + value;
     }
 
     //is going to show all the recipes

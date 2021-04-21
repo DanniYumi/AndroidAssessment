@@ -55,7 +55,7 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/RecipeNameTextView"
-                app:srcCompat="@drawable/conchiglionewhitesauce" />
+                app:srcCompat="@drawable/recipe_4" />
 
             <TextView
                 android:id="@+id/RecipeNameTextView"

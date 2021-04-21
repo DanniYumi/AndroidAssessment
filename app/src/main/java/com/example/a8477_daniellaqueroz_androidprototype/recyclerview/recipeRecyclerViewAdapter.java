@@ -22,7 +22,7 @@ public class recipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeViewHo
         public List<ProductsList> getProductsLists() {
         return productsLists;
     }
-    public recipeRecyclerViewAdapter(List<ProductsList> productsLists, Context context, OnRecipeListener onRecipeListener){
+        public recipeRecyclerViewAdapter(List<ProductsList> productsLists, Context context, OnRecipeListener onRecipeListener){
         this.productsLists = productsLists;
         this.context = context;
         this.onRecipeListener = onRecipeListener;
@@ -35,9 +35,9 @@ public class recipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeViewHo
         //define the layout
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-        View recipeview =inflater.inflate(R.layout.recycler_item_view, parent , false);
+        View recipeView =inflater.inflate(R.layout.recycler_item_view, parent , false);
 
-        RecipeViewHolder recipeViewHolder = new RecipeViewHolder(recipeview, onRecipeListener);
+        RecipeViewHolder recipeViewHolder = new RecipeViewHolder(recipeView, onRecipeListener);
 
         return recipeViewHolder;
     }
@@ -59,5 +59,9 @@ public class recipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeViewHo
     public void replaceItem(int position, ProductsList productsList){
             productsLists.set(position, productsList);
             notifyItemChanged(position);
+    }
+    public void addItem(ProductsList productsList){
+            productsLists.add(productsList);
+            notifyItemChanged(getItemCount());
     }
 }

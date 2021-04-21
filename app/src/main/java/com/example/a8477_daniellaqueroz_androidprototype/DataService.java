@@ -9,6 +9,13 @@ import java.util.List;
 public class DataService {
     private ListDatabase sqlite;
 
+    public void connect(){
+
+    }
+    public void disconnect(){
+
+    }
+
     public void init(Context context){
 
         sqlite = sqlite.getInstance(context);
